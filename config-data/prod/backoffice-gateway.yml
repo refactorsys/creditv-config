@@ -1,0 +1,30 @@
+ #Application Configuration
+server:
+  port: 8999
+
+spring:
+  application.name: backoffice-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: firebase-service
+        uri: lb://backoffice-firebase
+        predicates:
+        - Path=/backoffice/api/v1/messaging/**
+        #filters:
+        #- RewritePath=/backoffice/api/v1/messaging/*, /
+      - id: device-service
+        uri: lb://backoffice-device
+        predicates:
+        - Path=/backoffice/api/**,/api/auth/**,/api/test/**
+        #- Path=/backoffice/api/v1/device/**
+        #filters:
+        #- RewritePath=/backoffice/api/v1/device/*, /
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_USER}:${EUREKA_PASSWORD}@${EUREKA_HOSTNAME}:${EUREKA_PORT}/eureka
+      
