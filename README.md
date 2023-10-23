@@ -1,2 +1,2 @@
-# uphone-config
-Repositorio de archivos de configuración de uPhone Config Server
+# creditv-config
+Repositorio de archivos de configuración de CrediTV Config Server
