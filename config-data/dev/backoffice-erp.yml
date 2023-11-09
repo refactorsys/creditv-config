@@ -39,4 +39,4 @@ url:
 
 api:
   backoffice-customer:
-    url: lb://backoffice-customer/backoffice/api/v1/cuentacliente/signup
+    url: lb://backoffice-customer/backoffice/api/v1/customer/signup
