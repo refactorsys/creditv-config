@@ -38,5 +38,5 @@ url:
   notifier: http://backoffice-notifier/backoffice/api/v1/notify
 
 api:
-  backoffice-cuentacliente:
-    url: lb://backoffice-cuentacliente/backoffice/api/v1/cuentacliente/signup
+  backoffice-customer:
+    url: lb://backoffice-customer/backoffice/api/v1/cuentacliente/signup
