@@ -11,8 +11,6 @@ spring:
     url: jdbc:mariadb://${RDS_HOSTNAME}:${RDS_PORT}/${RDS_DB_NAME}?autoReconnect=true
     username: ${RDS_USERNAME}
     password: ${RDS_PASSWORD}
-    hikari:
-      maximum-pool-size: 3
 
   jpa:
     show-sql: false
