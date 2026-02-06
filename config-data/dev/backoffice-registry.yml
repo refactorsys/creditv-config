@@ -1,6 +1,6 @@
 #Application Configuration
 server:
-  port: 8099
+  port: 6099
 
 eureka:
   instance:
