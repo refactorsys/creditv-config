@@ -62,7 +62,7 @@ api:
     approve: ${ERP_PROVIDER_APPROVE}
     discard: ${ERP_PROVIDER_DISCARD} 
     state: ${ERP_PROVIDER_GET_STATE}
-  uphone-erp:
+  creditv-erp:
     url: lb://backoffice-erp/backoffice/api/v1/erp
   iaaa:
     base-url: ${IAAA_BASE_URL}
@@ -73,6 +73,7 @@ modeldecision:
   url: ${MODELDECISION_URL}
   tabledecision: ${MODELDECISION_TABLE}
   agency: ${MODELDECISION_AGENCY}
+
 
 
 
