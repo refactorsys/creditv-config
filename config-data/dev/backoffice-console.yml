@@ -27,6 +27,10 @@ eureka:
     serviceUrl:
       defaultZone: http://${EUREKA_USER}:${EUREKA_PASSWORD}@${EUREKA_HOSTNAME}:${EUREKA_PORT}/eureka
 
+api:
+  backoffice-journal:
+    url: lb://backoffice-journal/backoffice/api/v1/journal
+    
 management:
   endpoints:
     web:
