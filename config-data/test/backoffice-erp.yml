@@ -42,3 +42,5 @@ url:
 api:
   backoffice-customer:
     url: lb://backoffice-customer/backoffice/api/v1/customer/signup
+  backoffice-journal:
+    url: lb://backoffice-journal/backoffice/api/v1/journal
