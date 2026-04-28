@@ -7,9 +7,11 @@ server:
 
 spring:
   r2dbc:
-    url: r2dbc:mariadb://${RDS_HOSTNAME}:${RDS_PORT}/${RDS_DB_NAME}?ssl=true
+    url: r2dbc:mariadb://${RDS_HOSTNAME}:${RDS_PORT}/${RDS_DB_NAME}
     username: ${RDS_USERNAME}
     password: ${RDS_PASSWORD}
+    properties:
+      sslMode: REQUIRED
     pool:
       enabled: true
       initial-size: 5
