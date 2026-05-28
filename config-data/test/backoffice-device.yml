@@ -46,3 +46,5 @@ api:
     url: lb://backoffice-parameter/backoffice/api/v1/parameter/find
   backoffice-journal:
     url: lb://backoffice-journal/backoffice/api/v1/journal
+  backoffice-erp-provider:
+    url: lb://backoffice-erp-provider/backoffice/api/v1/erp-provider
