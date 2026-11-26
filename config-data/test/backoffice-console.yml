@@ -37,4 +37,6 @@ management:
 api:
   backoffice-journal:
     url: lb://backoffice-journal/backoffice/api/v1/journal
+  backoffice-firebase:
+    url: lb://backoffice-firebase/backoffice/api/v1/messaging
         
