@@ -6,11 +6,18 @@ server:
     include-binding-errors: always
 
 spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
   datasource:
     driverClassName: org.mariadb.jdbc.Driver
     url: jdbc:mariadb://${RDS_HOSTNAME}:${RDS_PORT}/${RDS_DB_NAME}?autoReconnect=true
     username: ${RDS_USERNAME}
     password: ${RDS_PASSWORD}
+    hikari:
+      maximum-pool-size: 3
 
   jpa:
     show-sql: false
@@ -27,15 +34,14 @@ eureka:
     serviceUrl:
       defaultZone: http://${EUREKA_USER}:${EUREKA_PASSWORD}@${EUREKA_HOSTNAME}:${EUREKA_PORT}/eureka
 
-api:
-  backoffice-journal:
-    url: lb://backoffice-journal/backoffice/api/v1/journal
-  backoffice-firebase:
-    url: lb://backoffice-firebase/backoffice/api/v1/messaging
-    
 management:
   endpoints:
     web:
       exposure:
         include: "*"
-        
+
+api:
+  backoffice-journal:
+    url: lb://backoffice-journal/backoffice/api/v1/journal
+  backoffice-firebase:
+    url: lb://backoffice-firebase/backoffice/api/v1/messaging
